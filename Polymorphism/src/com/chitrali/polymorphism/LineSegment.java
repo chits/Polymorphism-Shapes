@@ -2,7 +2,7 @@ package com.chitrali.polymorphism;
 import java.awt.*;
 
 /**
- * <h1>LineSegment</h1>
+ * <h1>LineSegment Class</h1>
  * This is the class for the shape LineSegment that implements the 
  * interface Shape
  * @author Chitrali
@@ -10,12 +10,25 @@ import java.awt.*;
  *
  */
 public class LineSegment implements Shape {
+	
 	/**
-	 * Declaration of the coordinates of line segment
+	 * x coordinate of First line point
+	 */	
+	protected int x1;
+	/**
+	 * y coordinate of first line point
 	 */
-	protected int x1,y1,x2,y2;
+	protected int y1;
 	/**
-	 * Declaration of the Field color used to draw line segment
+	 * x coordinate of second line point
+	 */
+	protected int x2;
+	/**
+	 * y coordinate of second line point
+	 */
+	protected int y2;
+	/**
+	 *  color to draw line segment
 	 */
 	protected Color color;
 	/**
@@ -36,13 +49,13 @@ public class LineSegment implements Shape {
 	 * @return  String representation of Line Segment
 	 */
 	public String toString(){
-		return "LineSegment: ["+x1+","+y1+"]"+"["+x2+","+y2+"]";
+		return "<html>LineSegment: ["+x1+","+y1+"]"+"["+x2+","+y2+"]</html>";
 		
 	}
 	/**
 	 * Definition of Implementation of draw() function of the Shape Interface
-	 * @param Object of the Graphics Class
-	 * @see Line segment 
+	 * @param g of the Graphics Class
+	 * @see com.chitrali.polymorphism.Shape#draw(java.awt.Graphics)
 	 */
 	public void draw(Graphics g){
 		g.setColor(color);
